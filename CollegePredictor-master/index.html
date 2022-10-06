@@ -1,0 +1,426 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href= {{ url_for('static', filename='fa/css/all.css') }}>
+
+    <!--Custom Css-->
+    <link rel="stylesheet" type="text/css" href= {{ url_for('static', filename='css/style.css') }}>
+
+    <!--Jquery Css-->
+    <link rel="stylesheet" type="text/css" href= {{ url_for('static', filename='jq-ui/jquery-ui.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='jq-ui/jquery-ui.structure.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='jq-ui/jquery-ui.theme.css') }}>
+
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+<body>
+
+
+
+
+
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#2b2b5b;" >
+  <div class="container px-2 my-cont">
+  <a class="navbar-brand" href="#" ><img src={{ url_for('static', filename='images/header/logo.PNG') }}></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse ml-5 pl-5" id="navbarNavDropdown">
+    <ul class="navbar-nav mt-2 ml-5 pl-5">
+      <li class="nav-item active ml-1 pr-4">
+        <a class="nav-link" href="index.php" style="color:white" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown pr-4">
+        <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Study Material
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#" ><b>Books</b></a>
+          <a class="dropdown-item" href="#"><b>Test Series</b></a>
+        </div>
+      </li>
+      <li class="nav-item pr-4">
+        <a class="nav-link" href="blogs.php" style="color:white">Blogs</a>
+      </li>
+        <li class="nav-item pr-4">
+        <a class="nav-link" href="about.php" style="color:white">About Us</a>
+      </li>
+      <li class="nav-item pr-4">
+       <button class="btn btn-outline-success my-2 my-sm-0 sign-in" type="submit">Sign In</button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-outline-success my-2 ml-1 my-sm-0 sign-up" type="submit">Sign Up</button>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+	<!---start section 1--->
+<!---
+<div class="conatiner-fluid mt-5 pt-4">
+	<img src={{ url_for('static', filename='images/clg_p/header-image.PNG')}} class="img-fluid clg-p-img"  >
+	<div class="clg-p d-inline-block">
+		<h5 class="clg-head">We Provide Best Results for you Career</h5>
+		<p class="clg-para mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting Industry. Lorem Ipsum has been the industry's standard.</p>
+	</div>
+</div> --->
+
+<!---end section 1--->
+
+
+<div class="accordion py-5 mt-5">
+
+	<div class="container index-div">
+		<!---Start section 1 ---->
+
+		<div class="row pb-5 pr-5 section-one">
+			<div class="col-md-6 pr-5 text-right" style="border-right: 2px solid #b8c4e6;">
+				<h2 class="mt-2">Start your College</h2>
+			</div>
+			<div class="col-md-6 pl-3 pr-4 mt-1 text-justify">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+			</div>
+		</div>
+	</div>
+	{% with messages= get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+          {% for category,message in messages %}
+          <div class="alert alert-danger" role="alert">
+            <h3>{{message}}</h3>
+          </div>
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+	
+	`
+	<div class="container mb-5 pb-4 px-5">
+		<!---1st--->
+		<div class="card">
+			<div class="card-header">
+				<h3>Basic Details</h3><span class="fa fa-minus"></span>
+			</div>
+			<div class="card-body active">
+				<h5>
+					<form class="main-from" action="/" method="POST">
+    					<div class="form-row">
+                			<div class="form-group col">
+                			<input  name="mains_rank"  type="text" class="form-control" type="number" placeholder="Mains Rank">
+                				</div>
+                			<div class="form-group col">
+                			<input name="mains_percentile"  type="text" class="form-control"  min="0" max="100"  type="number" placeholder="Mains Percentile">
+                				</div>
+                		</div>
+						<div class="form-row">
+							<div class="col">
+								<input  name="advanced_rank"  type="text" class="form-control" type="number" placeholder="Advanced rank">
+							</div>
+							<div class="form-group col">
+								<select name="inputState" class="form-control">
+									<option selected>Home State</option>
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Goa">Goa</option>
+									<option value="Gujarat">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="Himachal Pradesh">Himachal Pradesh</option>
+									<option value="Jharkhand">Jharkhand</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="Madhya Pradesh">Madhya Pradesh</option>
+									<option value="Maharashtra">Maharashtra</option>
+									<option value="Mnipur">Manipur</option>
+									<option value="Maghalaya">Maghalaya</option>
+									<option value="Mizoram">Mizoram</option>
+									<option value="Nagaland">Nagaland</option>
+									<option value="Odisha">Odisha</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Tripura">Tripura</option>
+									<option value="Telangana">Telangana</option>
+									<option value="Uttar Pradesh">Uttar Pradesh</option>
+									<option value="Uttarakhand">Uttarakhand</option>
+									<option value="West Bengal">West Bengal</option> 
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-row">
+							<div class="form-group col">
+								<select name="category" class="form-control">
+									<option selected>Caste</option>
+									<option value="GEN">Genral</option>
+									<option value="OBC-NCL">OBC</option>
+									<option value="SC">SC</option>
+									<option value="ST">ST</option>
+									<option value="EWS">EWS</option>
+								</select>
+							</div>
+							<div class="form-group col">
+								<select name="gender" class="form-control">
+									<option selected>Gender</option>
+									<option value='M'>Male</option>
+									<option value='F'>Female</option>
+									<option value='O'>Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-check form-check-inline" style="font-size: 15px;  color: #3d3d3d;">
+							<legend class="col-form-label" >Specially Abled -</legend>
+							<input class="form-check-input ml-2" type="radio" name='pwd' id="inlineRadio1" value="YES">
+							<label class="form-check-label" for="inlineRadio1">Yes</label>
+							<input class="form-check-input ml-2" checked='' type="radio" name='pwd' id="inlineRadio1" value="NO">
+							<label class="form-check-label" for="inlineRadio1">No</label>
+						</div>
+						<div class='set' style="font-size: 15px;  color: #3d3d3d;">
+                            <label for='limit'> Prediction Limit -</label>
+                            <select name="limit">
+                              <option selected value=25></option>
+                              <option value=10>10</option>
+                              <option value=25>25</option>
+                              <option value=50>50</option>
+                              <option value=100>100</option>
+                              <option value=200>200</option>
+                           </select>
+                          </div>
+						
+						
+				
+				</h5>
+			</div>
+		</div>
+					<div class="form-group col pr-0 mt-2 text-right">
+						<div class="form-group pr-0 col text-right">
+							<button class="btn btn-secondary mr-2">Show Results</button>		
+							<!--
+							<button type="button" class="btn btn-primary"> data-toggle="modal" data-target="#exampleModal"
+								Show Results
+							</button> 
+							-->	
+						</form>
+						<!-- Modal -->
+						
+						 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" style="cursor: context-menu;">
+								<div class="modal-content">
+									<div class="modal-body p-0 m-0">
+										<div class="container my-main-div">
+											<div class="row">
+												<div class="col-lg-7" style="background-color: #2f3a5b;">
+													<div class="row boy-img">
+														<img src={{ url_for('static', filename='images/clg_p/login.PNG') }} class="pt-5 img-fluid">
+													</div>
+												</div>
+												<div class="col-lg-5">
+													<h2 class="mt-4 pt-4">Login to Account</h2><hr>
+													<div class="row">
+          												<form action="college_list.php" method="post" id="my-login-form" class="offset-md-1">
+            												<input type="text" name="user_name" value="" size="40" class="form-control required"  placeholder="Enter your Username">
+            												<input type="password" name="password" value="" size="40" class="form-control required" placeholder="Enter your Password">
+            												 <div class="ind_rd_mrs ml-3 mt-4">  
+           														<input type="submit" value="Login" class="form-submit"> 
+            												</div>
+        												</form>
+        												<div class="container-fluid">
+															<div class="d-flex justify-content-between text-center px-5">
+    															<div class="pl-1 form-group form-check">
+     	 															<label class="form-check-label ml-3"><input class="form-check-input" type="checkbox" name="remember" style="font-size: 14px!important;">Remember Me</label>
+    															</div>		
+    															<div class="pr-3"><a href="#">Forget Password</a></div>
+  															</div>		
+  															<h6 class="text-center" style=" color: #484848;font-size: 14px;">Or Login with</h6>
+														</div>	
+														<div class="row mt-2" style="width: 90%;margin-left: 2%"> 
+														<div class="col-lg-12 col-xl-6 col-md-12 p-0">
+															<div class="p-2 ml-4 pl-4">
+    															<div class="btn bg-fb p-1"><img src={{ url_for('static', filename='images/clg_p/Path.png') }} class="pr-3">Facebook</div>		
+    														</div>
+														</div>
+														<div class="col-lg-12 col-xl-6 col-md-12 pl-0">
+															<div class="p-2">
+    															<div class="btn p-1 bg-google"><img src={{ url_for('static', filename='images/clg_p/Shape.png') }} class="pr-4">Google</div>		
+    														</div>
+														</div>
+													</div>
+													
+													</div><a href="sign-in.php"><h6 class="text-center mt-2" style="font-size: 15px;color: #2f3a5b;">Create New Account</h6></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div> 
+
+		</div>
+	</div>
+
+		<!-- Button trigger modal -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".card-header").click(function(){
+					if($(this).next(".card-body").hasClass("active")){
+						$(this).next(".card-body").removeClass("active").slideUp()
+						$(this).children("span").removeClass("fa-minus").addClass("fa-plus");
+
+					}
+					else{
+						$(".card .card-body").removeClass("active").slideUp()
+						$(".card .card-header span").removeClass("fa-minus").addClass("fa-plus");
+						$(this).next(".card-body").addClass("active").slideDown()
+						$(this).children("span").removeClass("fa-plus").addClass("fa-minus");
+					}
+				});
+
+			});
+		</script>
+	</body>
+<body>
+	<div class="container" style="position: absolute;z-index: 999;left: 50%;transform: translate(-50%);">
+		<div class="row send-div py-4">
+			<div class="col-md-6 text-center py-5 p-4">
+				<h3>Subscribe Newsletter</h3>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+			</div>
+			<div class="col-md-6">
+				<form>
+					<div class="form-group mt-4 p-5">
+    					<input type="email" class="form-control py-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email Address">
+    					<div class="p-2 send-button px-3 rounded-lg"><img src= {{ url_for('static', filename='images/footer/send-button.PNG') }}></div>
+    				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid footer-bg pt-5" style="position: relative;margin-top:7.5%; ">
+		<div class="container p-4 pt-5 mt-5">
+			<div class="row pt-5">
+				<div class="col-md-4">
+					<div class="container">
+						<div class="row">
+							<img src= {{ url_for('static', filename='images/footer/logo.PNG') }} class="foot-logo">
+						</div>
+						<div class="row my-4">
+							<div class="col-md-3 text-center"><img src={{ url_for('static', filename='images/footer/mail.PNG') }} class="icon-img"></div>
+							<div class="col-md-9 pl-4 mt-3 email"><span class="my-footer-span">support@marg-darshan.com</span></div>
+							
+						</div>
+						<div class="row my-4">
+							<div class="col-md-3 text-center"><img src={{ url_for('static', filename='images/footer/phone.PNG') }}  class="icon-img"></div>
+							<div class="col-md-9 pl-4"><span class="my-footer-span">+91-9522225177 <br>0731-123456</span></div>
+						</div>
+						<div class="row my-4">
+							<div class="col-md-3 text-center"><img src={{ url_for('static', filename='images/footer/pin.PNG') }} class="icon-img"></div>
+							<div class="col-md-9 pl-4"><span class="my-footer-span">Vijay Nagar Square<br>Indore – MP 452010 INDIA</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="container">
+						<div class="row pt-1 mt-3">
+							<p class="useful pl-1">Useful Links</p>
+						</div>
+						<div class="row mt-1">
+							<div class="col-md-6 p-0">
+								<ul class="pl-3">
+									<li class="my-1">Exam Prepration</li>
+									<li class="my-1">College Details</li>
+									<li class="my-1">Study Material</li>
+									<li class="my-1">College Predictor</li>
+									<li class="my-1">College Details</li>
+									<li class="my-1">College Predictor</li>
+									<li class="my-1">College Details</li>
+
+								</ul>
+							</div>
+							<div class="col-md-6 p-0">
+								<ul class="pl-3">
+									<li class="my-1">Exam Prepration</li>
+									<li class="my-1">College Details</li>
+									<li class="my-1">Study Material</li>
+									<li class="my-1">College Predictor</li>
+									<li class="my-1">College Details</li>
+									<li class="my-1">College Predictor</li>
+									<li class="my-1">College Details</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="container">
+						<div class="row mt-3 pt-1">
+							<p class="useful pl-2">Follow us on</p>
+						</div>
+						<div class="row my-3 mb-3 icon-div">
+							<img src={{ url_for('static', filename='images/footer/facebook.PNG') }} class="media-img mr-3">
+							<img src={{ url_for('static', filename='images/footer/insta.PNG') }} class="media-img mr-3">
+							<img src={{ url_for('static', filename='images/footer/linkedin.PNG') }} class="media-img mr-3">
+							<img src={{ url_for('static', filename='images/footer/twitter.PNG') }} class="media-img mr-3">
+						</div>
+						<div class="row pt-1">
+							<div class="col-md-6 p-0">
+								<ul class="pl-3">
+									<li class="my-1">Exam Prepration</li>
+									<li class="my-1">College Details</li>
+									<li class="my-1">Study Material</li>
+									<li class="my-1">College Predictor</li>
+									<li class="my-1">College Details</li>
+								</ul>
+							</div>
+							<div class="col-md-6 p-0">
+								<ul class="pl-3">
+									<li class="my-1">Exam Prepration</li>
+									<li class="my-1">College Details</li>
+									<li class="my-1">Study Material</li>
+									<li class="my-1">College Predictor</li>
+									<li class="my-1">College Details</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr style="background-color: white;">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<p class="text-white copyright">Margdarshan © 2020 All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</body>
